@@ -21,7 +21,7 @@ const Search = ({
 
   const handleOnChangeInput = (e) => {
     toast.configure();
-    const regex = /[^A-Za-z]/gi;
+    const regex = /[^A-Za-z ]/gi;
     let value = e.target.value;
     if (regex.test(value)) {
       toast("Endlish latters only.");
