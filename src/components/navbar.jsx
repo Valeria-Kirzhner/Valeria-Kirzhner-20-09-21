@@ -6,7 +6,7 @@ const Navbar = () => {
     <nav className="navbar navbar-expand-lg navbar-light shadow-sm mb-4">
       <div className="container">
         <h4 className="nav-item nav-link" to="/">
-          Herolo Weather App
+          Weather App
         </h4>
         <button
           className="navbar-toggler"

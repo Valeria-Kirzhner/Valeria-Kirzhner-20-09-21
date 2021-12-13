@@ -23,7 +23,7 @@ const App = () => {
       </main>
       <footer>
         <p className="border-top pt-3  text-center ">
-          Herolo Weather © {new Date().getFullYear()}
+          Weather App © {new Date().getFullYear()}
         </p>
       </footer>
     </React.Fragment>

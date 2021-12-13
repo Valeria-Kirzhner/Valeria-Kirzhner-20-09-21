@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { locationAutocomplete } from "../services/weatherService";
 import { toast } from "react-toastify";
+import axios from "axios";
 
 import { connect } from "react-redux";
 import {
@@ -33,7 +34,8 @@ const Search = ({
 
   useEffect(() => {
     const fetchData = async () => {
-      const payload = await locationAutocomplete(userInput);
+      let source = axios.CancelToken.source();
+      const payload = await locationAutocomplete(userInput, source);
       setData(payload.data);
     };
     if (userInput.length > 0) {

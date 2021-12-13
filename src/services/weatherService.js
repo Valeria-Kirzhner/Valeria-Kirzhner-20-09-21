@@ -17,9 +17,12 @@ const apikey = "KQweRkDR2YCHe1IDtsLQQbvhNdIt4mih";
 //5IrGIcM0N6wJOcSJ9pQGENFnMEZi2ytW
 //9q5ck7fLGkuaeRDQGL9ANZGPAowGBnk7
 
-export function locationAutocomplete(q) {
+export function locationAutocomplete(q, s) {
   return axios.get(
-    `/locations/v1/cities/autocomplete?apikey=${apikey}&q=${q}&language=en`
+    `/locations/v1/cities/autocomplete?apikey=${apikey}&q=${q}&language=en`,
+    {
+      cancelToken: s.token,
+    }
   );
 }
 
