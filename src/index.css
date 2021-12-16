@@ -134,5 +134,10 @@
     width: 325px;
   }
 }
-.ul-list-group {
+ul.list-group.ul-list-group {
+  display: block;
+  position: absolute;
+  z-index: 100;
+  width: 94%;
+  padding-left: 5px;
 }
